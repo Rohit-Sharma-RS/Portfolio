@@ -1,3 +1,5 @@
+import React from 'react';
+
 interface ContactFormEmailProps {
   name: string;
   email: string;
@@ -21,7 +23,7 @@ const ContactFormEmail: React.FC<Readonly<ContactFormEmailProps>> = ({
     <p>{message}</p>
     <hr />
     <p>Thank you for your message, {name}! I will reply as soon as I can.</p>
-    <p>&copy; 2024 Rohit Sharma</p>
+    <p>&copy; 2025 Rohit Sharma</p>
   </div>
 );
 
