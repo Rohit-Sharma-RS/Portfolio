@@ -1,10 +1,12 @@
 "use client";
 
-import { sendEmail } from "@/lib/actions";
-import { ContactFormSchema } from "@/lib/schemas";
+import { sendEmail } from "../lib/actions";
+import { ContactFormSchema } from "../lib/schemas";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { PaperPlaneIcon, ReloadIcon } from "@radix-ui/react-icons";
 import { SubmitHandler, useForm } from "react-hook-form";
+import dynamic from "next/dynamic";
+
 import { toast } from "sonner";
 import { z } from "zod";
 import { Button } from "./ui/Button";

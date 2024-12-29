@@ -1,7 +1,7 @@
-import LinkWithIcon from "@/components/LinkWithIcon";
-import MDXContent from "@/components/MDXContent";
-import { getPostBySlug, getPosts } from "@/lib/posts";
-import { formatDate } from "@/lib/utils";
+import LinkWithIcon from "../../../components/LinkWithIcon";
+import MDXContent from "../../../components/MDXContent";
+import { getPostBySlug, getPosts } from "../../../lib/posts";
+import { formatDate } from "../../../lib/utils";
 import { ArrowLeftIcon } from "@radix-ui/react-icons";
 import Image from "next/image";
 import { notFound } from "next/navigation";

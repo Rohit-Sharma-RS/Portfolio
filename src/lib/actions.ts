@@ -1,13 +1,21 @@
 "use server";
 
-import ContactFormEmail from "@/components/email/ContactFormEmail";
-import { Resend } from "resend";
 import { z } from "zod";
-import { ContactFormSchema } from "@/lib/schemas";
+import { ContactFormSchema } from "./schemas";
+import dotenv from "dotenv";
+import nodemailer from "nodemailer";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+dotenv.config();
 
 type ContactFormInputs = z.infer<typeof ContactFormSchema>;
+
+const transporter = nodemailer.createTransport({
+  service: 'gmail',
+  auth: {
+    user: process.env.EMAIL_USER,
+    pass: process.env.EMAIL_PASS,
+  },
+});
 
 export async function sendEmail(data: ContactFormInputs) {
   const result = ContactFormSchema.safeParse(data);
@@ -18,23 +26,24 @@ export async function sendEmail(data: ContactFormInputs) {
 
   try {
     const { name, email, message } = result.data;
-    const { data, error } = await resend.emails.send({
-      from: `rohit777in.com <vampire.instinct777@gmail.com>`,
+
+    const mailOptions = {
+      from: `rohit777in.com <${process.env.EMAIL_USER}>`,
       to: "rohitrnc5458@gmail.com",
-      replyTo: [email],
-      cc: [email],
+      replyTo: email,
+      cc: email,
       subject: `New message from ${name}!`,
       text: `Name:\n${name}\n\nEmail:\n${email}\n\nMessage:\n${message}`,
-      // react: ContactFormEmail({ name, email, message }),
-    });
+    };
 
-    if (!data || error) {
-      console.error(error?.message);
+    const info = await transporter.sendMail(mailOptions);
+
+    if (!info.messageId) {
       throw new Error("Failed to send email!");
     }
 
     return { success: true };
   } catch (error) {
-    return { error };
+    return { error: error instanceof Error ? error.message : String(error) };
   }
 }
