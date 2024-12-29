@@ -1,4 +1,5 @@
 import Link from "next/link";
+import React from "react";
 
 const lastUpdated = "Sep 2024";
 

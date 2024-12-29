@@ -1,0 +1,24 @@
+{
+  "career": [
+    {
+      "name": "Techplement",
+      "href": "https://techplement.com/",
+      "title": "Python Developer (Intern)",
+      "logo": "/techplement.png",
+      "start": "Nov 2024",
+      "end": "Dec 2024",
+      "description": [
+        "Contributed to the communication sector, focused on developing an autonomous email sending system integrated with logging and tracking functionalities",
+        "This project aimed to streamline bulk email distribution while maintaining efficiency, security, and transparency."
+      ],
+    "links": [
+      {
+        "name": "Certificate",
+        "href": "https://drive.google.com/file/d/1zZmdEaANZWKiVBFWsFNJ4-8bFogQfPyi/view?usp=sharing",
+        "icon": "globe"
+      }
+    ]
+    }
+  ]
+}
+

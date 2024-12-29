@@ -1,10 +1,10 @@
-import Experience from "@/components/Experience";
-import LinkWithIcon from "@/components/LinkWithIcon";
-import Posts from "@/components/Posts";
-import Projects from "@/components/Projects";
-import Socials from "@/components/Socials";
-import { Button } from "@/components/ui/Button";
-import { getPosts } from "@/lib/posts";
+import Experience from "../components/Experience";
+import LinkWithIcon from "../components/LinkWithIcon";
+import Posts from "../components/Posts";
+import Projects from "../components/Projects";
+import Socials from "../components/Socials";
+import { Button } from "../components/ui/Button";
+import { getPosts } from "../lib/posts";
 import {
   ArrowDownRight,
   ArrowRightIcon,

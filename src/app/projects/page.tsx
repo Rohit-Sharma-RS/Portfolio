@@ -1,4 +1,5 @@
-import Projects from "@/components/Projects";
+import Projects from "../../components/Projects";
+import React from "react";
 
 export default async function ProjectPage() {
   return (

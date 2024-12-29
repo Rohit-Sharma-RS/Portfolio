@@ -1,0 +1,23 @@
+{
+  "projects": [
+    {
+      "name": "Skimmer NLP",
+      "description": "In the healthcare landscape, navigating through dense medical literature can be overwhelming. That's where Skimmer NLP comes in! Using advanced NLP techniques, this project classifies sentences in medical research abstracts into distinct categories like objectives, methods, results, and conclusions for better readability and comprehension.",
+      "image": "/skimmer.jpeg",
+      "tags": [
+        "Python",
+        "sklearn",
+        "Tensorflow",
+        "Data Engineering",
+        "Data Preprocessing"        
+      ],
+      "links": [
+        {
+          "name": "Source",
+          "href": "https://github.com/Rohit-Sharma-RS/ML-and-DL/tree/main/Skimmer_NLP_project",
+          "icon": "github"
+        }
+      ]
+    }
+  ]
+}
