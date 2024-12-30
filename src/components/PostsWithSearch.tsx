@@ -1,6 +1,6 @@
 "use client";
 
-import { PostMetadata } from "@/lib/posts";
+import { PostMetadata } from "../lib/posts";
 import { Delete } from "lucide-react";
 import { useState } from "react";
 import Posts from "./Posts";

@@ -3,6 +3,7 @@
 import { MinusIcon, PlusIcon } from "@radix-ui/react-icons";
 import { useState } from "react";
 import { Button } from "./ui/Button";
+import React from "react";
 
 export default function Counter() {
   const [count, setCount] = useState(0);

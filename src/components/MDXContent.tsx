@@ -1,5 +1,5 @@
-import { MDXRemote, MDXRemoteProps } from "next-mdx-remote/rsc";
-import { JSX } from "react";
+import { MDXRemote, MDXRemoteProps } from "next-mdx-remote";
+import React, { JSX } from "react";
 import { highlight } from "sugar-high";
 import Counter from "./Counter";
 
