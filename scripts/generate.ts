@@ -2,18 +2,17 @@ import dotenv from "dotenv";
 dotenv.config({ path: ".env.local" });
 
 import { DocumentInterface } from "@langchain/core/documents";
-import { Redis } from "@upstash/redis";
 import { DirectoryLoader } from "langchain/document_loaders/fs/directory";
 import { TextLoader } from "langchain/document_loaders/fs/text";
 import { RecursiveCharacterTextSplitter } from "langchain/text_splitter";
-import { getEmbeddingsCollection, getVectorStore } from "../src/lib/vectordb";
+
+const routesSplitter = new RecursiveCharacterTextSplitter();
+const dataSplitter = new RecursiveCharacterTextSplitter();
+const postSplitter = new RecursiveCharacterTextSplitter();
 
 async function generateEmbeddings() {
-  const vectorStore = await getVectorStore();
-
   // clear existing data
-  (await getEmbeddingsCollection()).deleteMany({});
-  Redis.fromEnv().flushdb();
+  // Removed Redis related code
 
   const routeLoader = new DirectoryLoader(
     "src/app",
@@ -44,8 +43,8 @@ async function generateEmbeddings() {
 
   // console.log(routes);
 
-  const routesSplitter = RecursiveCharacterTextSplitter.fromLanguage("html");
-  const splitRoutes = await routesSplitter.splitDocuments(routes);
+  await routesSplitter.splitDocuments(routes);
+  await routesSplitter.splitDocuments(routes);
 
   // resume data
   const dataLoader = new DirectoryLoader("src/data", {
@@ -56,8 +55,8 @@ async function generateEmbeddings() {
 
   // console.log(data);
 
-  const dataSplitter = RecursiveCharacterTextSplitter.fromLanguage("js");
-  const splitData = await dataSplitter.splitDocuments(data);
+  await dataSplitter.splitDocuments(data);
+  await dataSplitter.splitDocuments(data);
 
   // blog posts
   const postLoader = new DirectoryLoader(
@@ -78,12 +77,10 @@ async function generateEmbeddings() {
 
   // console.log(posts);
 
-  const postSplitter = RecursiveCharacterTextSplitter.fromLanguage("markdown");
-  const splitPosts = await postSplitter.splitDocuments(posts);
+  await postSplitter.splitDocuments(posts);
+  await postSplitter.splitDocuments(posts);
 
-  await vectorStore.addDocuments(splitRoutes);
-  await vectorStore.addDocuments(splitData);
-  await vectorStore.addDocuments(splitPosts);
+  // Further processing of splitRoutes, splitData, and splitPosts can be done here
 }
 
 generateEmbeddings();
