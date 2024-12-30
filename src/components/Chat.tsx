@@ -24,6 +24,7 @@ export default function Chat() {
 
   const { isVisible } = useChatbot();
 
+  /*
   return (
     isVisible && (
       <Accordion type="single" collapsible className="relative z-40 flexs">
@@ -53,4 +54,6 @@ export default function Chat() {
       </Accordion>
     )
   );
+  */
+  return null;
 }

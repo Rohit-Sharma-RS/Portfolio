@@ -2,20 +2,92 @@
   "projects": [
     {
       "name": "Skimmer NLP",
-      "description": "In the healthcare landscape, navigating through dense medical literature can be overwhelming. That's where Skimmer NLP comes in! Using advanced NLP techniques, this project classifies sentences in medical research abstracts into distinct categories like objectives, methods, results, and conclusions for better readability and comprehension.",
+      "description": "Classifies sentences in medical research abstracts into categories like objectives, methods, results, and conclusions for better readability.",
       "image": "/skimmer.jpeg",
       "tags": [
         "Python",
         "sklearn",
         "Tensorflow",
         "Data Engineering",
-        "Data Preprocessing"        
+        "Data Preprocessing"
       ],
       "links": [
         {
           "name": "Source",
           "href": "https://github.com/Rohit-Sharma-RS/ML-and-DL/tree/main/Skimmer_NLP_project",
           "icon": "github"
+        }
+      ]
+    },
+    {
+      "name": "Ember",
+      "description": "A program integrating AI, gesture control, and automation for tasks like social media management, music control, and sentiment analysis.",
+      "image": "/ember.jpeg",
+      "tags": [
+        "Python",
+        "OpenCV",
+        "Deep Learning",
+        "Selenium",
+        "AI Automation"
+      ],
+      "links": [
+        {
+          "name": "Source",
+          "href": "https://github.com/YourGithub/Ember",
+          "icon": "github"
+        },
+        {
+          "name": "Demonstration Post",
+          "href":"https://www.linkedin.com/posts/rohit-sharma-b26200282_automation-python-deeplearning-activity-7272935936668180481-1BT9/?utm_source=share&utm_medium=member_desktop",
+          "icon": "linkedin"
+        }
+      ]
+    },
+    {
+      "name": "AI Chess Companion",
+      "description": "A web app combining chess with AI, offering move suggestions, auto-play, and a sleek interactive design.",
+      "image": "/ai-chess-companion.jpeg",
+      "tags": [
+        "Flask",
+        "JavaScript",
+        "Bootstrap",
+        "AI",
+        "Chess"
+      ],
+      "links": [
+        {
+          "name": "Source",
+          "href": "https://github.com/YourGithub/AI-Chess-Companion",
+          "icon": "github"
+        },
+        {
+          "name": "Demonstration Post",
+          "href": "https://www.linkedin.com/posts/rohit-sharma-b26200282_automation-python-deeplearning-activity-7272935936668180481-1BT9/?utm_source=share&utm_medium=member_desktop",
+          "icon": "linkedin"
+        }
+      ]
+    },
+    {
+      "name": "CAPTCHA Cracker",
+      "description": "OCR-based CAPTCHA solver using Bidirectional LSTMs and CTCLoss for accurate sequence recognition in complex text images.",
+      "image": "/captcha-cracker.jpeg",
+      "tags": [
+        "Deep Learning",
+        "Bidirectional LSTMs",
+        "CTCLoss",
+        "OCR",
+        "CAPTCHA"
+      ],
+      "links": [
+        {
+          "name": "Source",
+          "href": "https://github.com/YourGithub/CAPTCHA-Cracker",
+          "icon": "github"
+        },
+        {
+          "name": "Demonstration Post",
+          "href": "https://www.linkedin.com/posts/rohit-sharma-b26200282_ai-decoding-captchas-with-precision-activity-7256927630136889346-oHE5?utm_source=share&utm_medium=member_desktop",
+          "icon": "linkedin"
         }
       ]
     }

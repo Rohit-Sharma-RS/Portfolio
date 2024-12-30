@@ -37,15 +37,17 @@ export default async function Home() {
           <p className="mt-4 font-light">
             {/* Update my age */}
             {new Date().getFullYear() - ROHIT_BIRTH_YEAR}
-            -year-old <s>Python</s> developer from India 🇮🇳.
+            -year-old aspiring Python developer from India 🇮🇳.
           </p>
           <p className="mt-2 font-light">
             I like to develop interactive applications, drink instant coffee and explore new prospectives in data science and machine learning,{" "}
           </p>
-          <div className="mt-4 flex items-end gap-1">
+            {/* 
+            <div className="mt-4 flex items-end gap-1">
             <p className="font-semibold">Ask the chatbot anything about me</p>
             <ArrowDownRight className="size-5 animate-bounce" />
-          </div>
+            </div>
+            */}
           <section className="mt-8 flex items-center gap-8">
             <Link href="/resume.pdf" target="_blank">
               <Button variant="outline">
