@@ -1,14 +1,10 @@
 {
   "compilerOptions": {
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
+    "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": false,
-    "noEmit": true,
+    "noEmit": false,
     "incremental": true,
     "module": "esnext",
     "esModuleInterop": true,
@@ -16,6 +12,7 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
+    "outDir": "./dist",
     "plugins": [
       {
         "name": "next"
@@ -25,10 +22,11 @@
   "include": [
     "next-env.d.ts",
     ".next/types/**/*.ts",
-    "**/*.ts",
-    "**/*.tsx"
+    "scripts/**/*.ts"  // Include only your standalone TypeScript scripts
   ],
   "exclude": [
-    "node_modules"
+    "node_modules",
+    "pages/**/*",
+    "components/**/*"
   ]
 }
