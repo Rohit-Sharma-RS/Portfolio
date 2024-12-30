@@ -1,11 +1,12 @@
 import LinkWithIcon from "../../../components/LinkWithIcon";
-import MDXContent from "../../../components/MDXContent";
+import { MDXRemote } from "next-mdx-remote";
 import { getPostBySlug, getPosts } from "../../../lib/posts";
 import { formatDate } from "../../../lib/utils";
 import { ArrowLeftIcon } from "@radix-ui/react-icons";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import path from "path";
+import { serialize } from "next-mdx-remote/serialize";
 
 const blogDirectory = path.join(process.cwd(), "content");
 
@@ -24,8 +25,10 @@ export default async function Post({ params }: { params: { slug: string } }) {
     notFound();
   }
 
-  const { metadata, content } = post;
+  const { metadata } = post;
   const { title, image, publishedAt } = metadata;
+  const { content } = post;
+  const serializedContent = await serialize(content);
 
   return (
     <article className="mt-8 flex flex-col gap-8 pb-16">
@@ -50,7 +53,7 @@ export default async function Post({ params }: { params: { slug: string } }) {
       </header>
 
       <main className="prose dark:prose-invert">
-        <MDXContent source={content} />
+        <MDXRemote {...serializedContent} />
       </main>
     </article>
   );
