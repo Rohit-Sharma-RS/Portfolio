@@ -1,0 +1,50 @@
+{
+    "education": [
+        {
+            "name": "Techno Main Salt lake",
+            "href": "https://www.ticollege.ac.in/",
+            "title": "Bachelor's in Computer Science and engineering(AI-ML)",
+            "logo": "/techno.jpeg",
+            "start": "2022",
+            "end": "2026"
+        },
+        {
+            "name": "DAV Kapil dev public school",
+            "href": "http://davkapildev.in/",
+            "title": "Senior Secondary Education",
+            "logo": "/davkdps.png",
+            "start": "2019",
+            "end": "2021",
+            "description": [
+                "Qualified Class 12 with 95% marks"
+            ],
+            "links": [
+                {
+                    "name": "Statement of marks Class 12",
+                    "href": "https://imgur.com/a/GmrxOWu",
+                    "icon": "globe"
+                }
+            ]
+        },
+        {
+            "name": "St. Francis School",
+            "href": "https://www.stfrancisranchi.in/",
+            "title": "Secondary Education",
+            "logo": "/stfrancis.jpg",
+            "start": "2008",
+            "end": "2019",
+            "description": [
+                "Qualified Class 10 with 95% marks in ICSE board examinations",
+                "Won a gold medal at National Science Olympiad(NSO)",
+                "Won a silver medal at National Computer Olympiad(NCO)"
+            ],
+            "links": [
+                {
+                    "name": "Statement of marks Class X",
+                    "href": "https://imgur.com/a/CAvzTSh",
+                    "icon": "globe"
+                }
+            ]
+        }
+    ]
+}
