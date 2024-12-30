@@ -13,7 +13,7 @@ async function generateEmbeddings() {
 
   // clear existing data
   (await getEmbeddingsCollection()).deleteMany({});
-  (await Redis.fromEnv()).flushdb();
+  Redis.fromEnv().flushdb();
 
   const routeLoader = new DirectoryLoader(
     "src/app",
