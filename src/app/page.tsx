@@ -57,7 +57,7 @@ export default async function Home() {
       <Experience />
 
       <section className="flex flex-col items-center gap-12">
-  <h2 className="title text-4xl text-left-left font-semibold">Technologies</h2>
+  <h2 className="title text-4xl text-left font-semibold">Technologies I Use and Love</h2>
   <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3 w-full max-w-4xl">
     {/* Machine Learning Section */}
     <div>
