@@ -57,10 +57,10 @@ export default async function Home() {
       <Experience />
 
       <section className="flex flex-col items-center gap-12">
-  <h2 className="title text-4xl text-left font-semibold">Technologies I Use and Love</h2>
-  <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3 w-full max-w-4xl">
-    {/* Machine Learning Section */}
-    <div>
+      <h2 className="title text-4xl text-left font-semibold">Technologies I Use and Love</h2>
+      <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3 w-full max-w-4xl">
+        {/* Machine Learning Section */}
+        <div className="border p-4 rounded-lg shadow-md">
       <h3 className="text-2xl font-semibold text-gray-900 dark:text-gray-100 mb-4 text-center sm:text-left">
         Machine Learning
       </h3>
@@ -78,10 +78,10 @@ export default async function Home() {
           <span className="text-gray-900 dark:text-gray-50">Scikit-learn</span>
         </li>
       </ul>
-    </div>
+        </div>
 
-    {/* Data Visualization Section */}
-    <div>
+        {/* Data Visualization Section */}
+        <div className="border p-4 rounded-lg shadow-md">
       <h3 className="text-2xl font-semibold text-gray-900 dark:text-gray-100 mb-4 text-center sm:text-left">
         Data Visualization
       </h3>
@@ -95,10 +95,10 @@ export default async function Home() {
           <span className="text-gray-900 dark:text-gray-50">Seaborn</span>
         </li>
       </ul>
-    </div>
+        </div>
 
-    {/* Programming Languages Section */}
-    <div>
+        {/* Programming Languages Section */}
+        <div className="border p-4 rounded-lg shadow-md">
       <h3 className="text-2xl font-semibold text-gray-900 dark:text-gray-100 mb-4 text-center sm:text-left">
         Languages
       </h3>
@@ -116,10 +116,10 @@ export default async function Home() {
           <span className="text-gray-900 dark:text-gray-50">JavaScript</span>
         </li>
       </ul>
-    </div>
+        </div>
 
-    {/* Web Development Section */}
-    <div>
+        {/* Web Development Section */}
+        <div className="border p-4 rounded-lg shadow-md">
       <h3 className="text-2xl font-semibold text-gray-900 dark:text-gray-100 mb-4 text-center sm:text-left">
         Web Development
       </h3>
@@ -137,10 +137,10 @@ export default async function Home() {
           <span className="text-gray-900 dark:text-gray-50">Bootstrap</span>
         </li>
       </ul>
-    </div>
+        </div>
 
-    {/* Automation Section */}
-    <div>
+        {/* Automation Section */}
+        <div className="border p-4 rounded-lg shadow-md">
       <h3 className="text-2xl font-semibold text-gray-900 dark:text-gray-100 mb-4 text-center sm:text-left">
         Automation
       </h3>
@@ -154,10 +154,10 @@ export default async function Home() {
           <span className="text-gray-900 dark:text-gray-50">BeautifulSoup</span>
         </li>
       </ul>
-    </div>
+        </div>
 
-    {/* API Development Section */}
-    <div>
+        {/* API Development Section */}
+        <div className="border p-4 rounded-lg shadow-md">
       <h3 className="text-2xl font-semibold text-gray-900 dark:text-gray-100 mb-4 text-center sm:text-left">
         API Development
       </h3>
@@ -171,10 +171,9 @@ export default async function Home() {
           <span className="text-gray-900 dark:text-gray-50">Flask</span>
         </li>
       </ul>
-    </div>
-  </div>
-</section>
-
+        </div>
+      </div>
+    </section>
 
       <section className="flex flex-col gap-8">
         <div className="flex justify-between">
