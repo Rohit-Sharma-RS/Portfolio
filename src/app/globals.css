@@ -4,6 +4,8 @@
 
 @layer base {
   :root {
+    --font-sans: 'Inter', sans-serif; 
+    --font-serif: 'Merriweather', serif; 
     --background: 0 0% 100%;
     --foreground: 224 71.4% 4.1%;
     --card: 0 0% 100%;
@@ -40,6 +42,19 @@
     --sh-sign: #8996a3;
     --sh-comment: #a19595;
   }
+  .prose h2 {
+    @apply text-gray-200; /* Professional contrast */
+  }
+  
+  .prose strong {
+    @apply text-gray-200 font-bold; /* Maintain readability */
+  }
+  
+  .prose p,
+  .prose li {
+    @apply text-gray-300; /* Restore consistent text styling */
+  }
+  
 
   .dark {
     --background: 224 71.4% 4.1%;
@@ -79,7 +94,10 @@
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans;
+  }
+  h1{
+    @apply text-5xl font-serif tracking-wide decoration-border/75 decoration-2;
   }
   .title {
     @apply font-serif text-5xl tracking-wide decoration-border/75 decoration-2;

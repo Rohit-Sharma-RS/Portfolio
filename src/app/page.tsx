@@ -8,7 +8,7 @@ import { getPosts } from "../lib/posts";
 import {
   ArrowDownRight,
   ArrowRightIcon,
-  FileDown
+  FileDown,
 } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -33,21 +33,15 @@ export default async function Home() {
           priority
         />
         <div className="flex flex-col">
-          <h1 className="title text-5xl">Hi! Rohit here 👋</h1>
+            <h1 className="title text-5xl font-bold">Hi! Rohit here 👋</h1>
           <p className="mt-4 font-light">
-            {/* Update my age */}
-            {new Date().getFullYear() - ROHIT_BIRTH_YEAR}
+            {new Date().getFullYear() - ROHIT_BIRTH_YEAR-1}
             -year-old aspiring Python developer from India 🇮🇳.
           </p>
           <p className="mt-2 font-light">
-            I like to develop interactive applications, drink instant coffee and explore new prospectives in data science and machine learning,{" "}
+            I like to develop interactive applications, drink instant coffee, and explore new
+            prospects in data science and machine learning.
           </p>
-            {/* 
-            <div className="mt-4 flex items-end gap-1">
-            <p className="font-semibold">Ask the chatbot anything about me</p>
-            <ArrowDownRight className="size-5 animate-bounce" />
-            </div>
-            */}
           <section className="mt-8 flex items-center gap-8">
             <Link href="/resume.pdf" target="_blank">
               <Button variant="outline">
@@ -62,9 +56,129 @@ export default async function Home() {
 
       <Experience />
 
+      <section className="flex flex-col items-center gap-12">
+  <h2 className="title text-4xl text-left-left font-semibold">Technologies</h2>
+  <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3 w-full max-w-4xl">
+    {/* Machine Learning Section */}
+    <div>
+      <h3 className="text-2xl font-semibold text-gray-900 dark:text-gray-100 mb-4 text-center sm:text-left">
+        Machine Learning
+      </h3>
+      <ul className="space-y-3">
+        <li className="flex items-center gap-3">
+          <Image src="/icons/tensorflow.svg" alt="TensorFlow" width={30} height={30} />
+          <span className="text-gray-900 dark:text-gray-50">TensorFlow & Keras</span>
+        </li>
+        <li className="flex items-center gap-3">
+          <Image src="/icons/pytorch.svg" alt="PyTorch" width={30} height={30} />
+          <span className="text-gray-900 dark:text-gray-50">PyTorch</span>
+        </li>
+        <li className="flex items-center gap-3">
+          <Image src="/icons/sklearn.svg" alt="Scikit-learn" width={30} height={30} />
+          <span className="text-gray-900 dark:text-gray-50">Scikit-learn</span>
+        </li>
+      </ul>
+    </div>
+
+    {/* Data Visualization Section */}
+    <div>
+      <h3 className="text-2xl font-semibold text-gray-900 dark:text-gray-100 mb-4 text-center sm:text-left">
+        Data Visualization
+      </h3>
+      <ul className="space-y-3">
+        <li className="flex items-center gap-3">
+          <Image src="/icons/matplotlib.svg" alt="Matplotlib" width={30} height={30} />
+          <span className="text-gray-900 dark:text-gray-50">Matplotlib</span>
+        </li>
+        <li className="flex items-center gap-3">
+          <Image src="/icons/seaborn.svg" alt="Seaborn" width={30} height={30} />
+          <span className="text-gray-900 dark:text-gray-50">Seaborn</span>
+        </li>
+      </ul>
+    </div>
+
+    {/* Programming Languages Section */}
+    <div>
+      <h3 className="text-2xl font-semibold text-gray-900 dark:text-gray-100 mb-4 text-center sm:text-left">
+        Languages
+      </h3>
+      <ul className="space-y-3">
+        <li className="flex items-center gap-3">
+          <Image src="/icons/python.svg" alt="Python" width={30} height={30} />
+          <span className="text-gray-900 dark:text-gray-50">Python</span>
+        </li>
+        <li className="flex items-center gap-3">
+          <Image src="/icons/sql.svg" alt="SQL" width={30} height={30} />
+          <span className="text-gray-900 dark:text-gray-50">SQL</span>
+        </li>
+        <li className="flex items-center gap-3">
+          <Image src="/icons/javascript.svg" alt="JavaScript" width={30} height={30} />
+          <span className="text-gray-900 dark:text-gray-50">JavaScript</span>
+        </li>
+      </ul>
+    </div>
+
+    {/* Web Development Section */}
+    <div>
+      <h3 className="text-2xl font-semibold text-gray-900 dark:text-gray-100 mb-4 text-center sm:text-left">
+        Web Development
+      </h3>
+      <ul className="space-y-3">
+        <li className="flex items-center gap-3">
+          <Image src="/icons/flask.svg" alt="Flask" width={30} height={30} />
+          <span className="text-gray-900 dark:text-gray-50">Flask</span>
+        </li>
+        <li className="flex items-center gap-3">
+          <Image src="/icons/django.svg" alt="Django" width={30} height={30} />
+          <span className="text-gray-900 dark:text-gray-50">Django</span>
+        </li>
+        <li className="flex items-center gap-3">
+          <Image src="/icons/bootstrap.svg" alt="Tailwind CSS" width={30} height={30} />
+          <span className="text-gray-900 dark:text-gray-50">Bootstrap</span>
+        </li>
+      </ul>
+    </div>
+
+    {/* Automation Section */}
+    <div>
+      <h3 className="text-2xl font-semibold text-gray-900 dark:text-gray-100 mb-4 text-center sm:text-left">
+        Automation
+      </h3>
+      <ul className="space-y-3">
+        <li className="flex items-center gap-3">
+          <Image src="/icons/selenium.svg" alt="Selenium" width={30} height={30} />
+          <span className="text-gray-900 dark:text-gray-50">Selenium</span>
+        </li>
+        <li className="flex items-center gap-3">
+          <Image src="/icons/bs4.svg" alt="BeautifulSoup" width={30} height={30} />
+          <span className="text-gray-900 dark:text-gray-50">BeautifulSoup</span>
+        </li>
+      </ul>
+    </div>
+
+    {/* API Development Section */}
+    <div>
+      <h3 className="text-2xl font-semibold text-gray-900 dark:text-gray-100 mb-4 text-center sm:text-left">
+        API Development
+      </h3>
+      <ul className="space-y-3">
+        <li className="flex items-center gap-3">
+          <Image src="/icons/rest.svg" alt="REST APIs" width={30} height={30} />
+          <span className="text-gray-900 dark:text-gray-50">REST APIs</span>
+        </li>
+        <li className="flex items-center gap-3">
+          <Image src="/icons/flask.svg" alt="Flask" width={30} height={30} />
+          <span className="text-gray-900 dark:text-gray-50">Flask</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+
       <section className="flex flex-col gap-8">
         <div className="flex justify-between">
-          <h2 className="title text-2xl sm:text-3xl">featured projects</h2>
+          <h2 className="title text-2xl sm:text-3xl font-semibold">Featured projects</h2>
           <LinkWithIcon
             href="/projects"
             position="right"
@@ -77,7 +191,7 @@ export default async function Home() {
 
       <section className="flex flex-col gap-8">
         <div className="flex justify-between">
-          <h2 className="title text-3xl">recent posts</h2>
+          <h2 className="title text-3xl font-semibold">Featured posts</h2>
           <LinkWithIcon
             href="/blog"
             position="right"
