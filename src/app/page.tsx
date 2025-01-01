@@ -25,31 +25,31 @@ export default async function Home() {
     <article className="mt-8 flex flex-col gap-16 pb-16">
       <section className="flex flex-col items-start gap-8 md:flex-row-reverse md:items-center md:justify-between">
         <Image
-          className="rounded-lg"
+          className="rounded-full w-45 h-45 object-cover"
           src="/ro.jpg"
           alt="Photo"
-          width={175}
-          height={175}
+          width={128}
+          height={128}
           priority
         />
         <div className="flex flex-col">
-            <h1 className="title text-5xl font-bold">Hi! Rohit here 👋</h1>
+        <h1 className="title text-5xl font-bold">Hi! Rohit here 👋</h1>
           <p className="mt-4 font-light">
-            {new Date().getFullYear() - ROHIT_BIRTH_YEAR-1}
-            -year-old aspiring Python developer from India 🇮🇳.
+        {new Date().getFullYear() - ROHIT_BIRTH_YEAR-1}
+        -year-old aspiring Python developer from India 🇮🇳.
           </p>
           <p className="mt-2 font-light">
-            I like to develop interactive applications, drink instant coffee, and explore new
-            prospects in data science and machine learning.
+        I like to develop interactive applications, drink instant coffee, and explore new
+        prospects in data science and machine learning.
           </p>
           <section className="mt-8 flex items-center gap-8">
-            <Link href="/resume.pdf" target="_blank">
-              <Button variant="outline">
-                <span className="font-semibold">Resume</span>
-                <FileDown className="ml-2 size-5" />
-              </Button>
-            </Link>
-            <Socials />
+        <Link href="/resume.pdf" target="_blank">
+          <Button variant="outline">
+            <span className="font-semibold">Resume</span>
+            <FileDown className="ml-2 size-5" />
+          </Button>
+        </Link>
+        <Socials />
           </section>
         </div>
       </section>
