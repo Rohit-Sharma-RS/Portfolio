@@ -4,8 +4,9 @@ export default function BlogPage() {
   const posts = [
     { slug: "dive-into-ML", title: "My Gradual Dive into Machine Learning", description: "A journey through the basics and advancements in Machine Learning." },
     { slug: "useful-py", title: "Scripting My Way Through Life: A collection of Useful Python Scripts", description: "A compilation of Python scripts that make life easier." },
+    {slug: "intern-interview", title: "My Technical Interview Experience", description: "Reflecting on an on-call technical interview for a data engineering intern role."},
     {slug: "hello-world", title: "Why I Love Python", description: "My first post here dedicated to Python"},
-    {slug: "intern-interview", title: "My Technical Interview Experience", description: "Reflecting on an on-call technical interview for a data engineering intern role."}
+
   ];
 
   return (

@@ -18,6 +18,17 @@
         "icon": "globe"
       }
     ]
+    },
+    {
+      "name": "Olcademy",
+      "href": "https://www.olcademy.in/?i=1",
+      "title": "Data Engineer (Intern)", 
+      "logo": "/olcademy.jpg",
+      "start": "Jan 2025",
+      "end": "Present",
+      "description": [
+        "Currently working as a Data Engineer intern at Olcademy."
+      ]
     }
   ]
 }
