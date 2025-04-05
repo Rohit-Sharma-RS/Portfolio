@@ -1,6 +1,31 @@
 {
   "projects": [
     {
+      "name": "IPL Predictor",
+      "description": "An IPL predictor application featuring player analyzer, venue analyzer, and team analyzer with interactive charts, making cricket analytics accessible and easy to understand.",
+      "image": "/ipl-pred.png",
+      "tags": [
+        "Python",
+        "Machine Learning",
+        "FastAPI",
+        "Pytest",
+        "Data Visualization",
+        "Interactive Charts"
+      ],
+      "links": [
+        {
+          "name": "Source",
+          "href": "https://github.com/Rohit-Sharma-RS/DS_project",
+          "icon": "github"
+        },
+        {
+          "name": "Demonstration Post",
+          "href":"https://www.linkedin.com/posts/rohit-sharma-b26200282_machinelearning-cricketanalytics-datascience-activity-7313859820292304896-qVn6?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAES6vk4BNfgbm6C3NqzCJAMef3vk6-B9AVw",
+          "icon": "linkedin"
+        }
+      ]
+    },
+    {
       "name": "Skimmer NLP",
       "description": "Classifies sentences in medical research abstracts into categories like objectives, methods, results, and conclusions for better readability.",
       "image": "/skimmer.jpeg",

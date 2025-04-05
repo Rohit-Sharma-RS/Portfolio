@@ -170,6 +170,10 @@ export default async function Home() {
           <Image src="/icons/flask.svg" alt="Flask" width={30} height={30} />
           <span className="text-gray-900 dark:text-gray-50">Flask</span>
         </li>
+        <li className="flex items-center gap-3">
+          <Image src="/icons/fastapi.svg" alt="Flask" width={30} height={30} />
+          <span className="text-gray-900 dark:text-gray-50">FastApi</span>
+        </li>
       </ul>
         </div>
       </div>
