@@ -26,7 +26,7 @@ export default function BlogPost() {
       {/* Post Content */}
       <section>
         <p className="text-gray-800 dark:text-gray-300">
-          Cricket analysis has come a long way from basic statistics to sophisticated predictive modeling. As a data scientist and cricket enthusiast, I set out to build an IPL match prediction system that goes beyond conventional approaches. In this post, I'll walk you through my journey of creating an advanced match predictor that incorporates a custom ELO rating system, player performance analytics, and machine learning.
+          Cricket analysis has come a long way from basic statistics to sophisticated predictive modeling. As a data scientist and cricket enthusiast, I set out to build an IPL match prediction system that goes beyond conventional approaches. In this post, I&#39;ll walk you through my journey of creating an advanced match predictor that incorporates a custom ELO rating system, player performance analytics, and machine learning.
         </p>
 
         <h2 className="text-gray-900 dark:text-gray-100">The Challenge of Cricket Prediction</h2>
@@ -47,7 +47,7 @@ export default function BlogPost() {
           <li>
             <strong>Role-Based Performance Weighting</strong>
             <p className="text-gray-800 dark:text-gray-300">
-              Unlike generic ELO systems, mine recognizes that batsmen, bowlers, and all-rounders should be evaluated differently. The function <code>get_weighted_role_performance()</code> calculates performance scores with weights tailored to each player's role:
+              Unlike generic ELO systems, mine recognizes that batsmen, bowlers, and all-rounders should be evaluated differently. The function <code>get_weighted_role_performance()</code> calculates performance scores with weights tailored to each player&#39;s role:
             </p>
             <ul>
               <li>For batsmen: 85% batting, 5% bowling, 10% fielding</li>
@@ -58,7 +58,7 @@ export default function BlogPost() {
           <li>
             <strong>Comprehensive Performance Metrics</strong>
             <p className="text-gray-800 dark:text-gray-300">
-              The system doesn't just count runs or wickets but evaluates:
+              The system doesn&#39;t just count runs or wickets but evaluates:
             </p>
             <ul>
               <li>Batting: Strike rate, runs scored, and dismissal impact</li>
@@ -81,7 +81,7 @@ export default function BlogPost() {
           <li>
             <strong>Form Adjustment</strong>
             <p className="text-gray-800 dark:text-gray-300">
-              A player's recent performances create a form factor that amplifies or dampens ELO adjustments:
+              A player&#39;s recent performances create a form factor that amplifies or dampens ELO adjustments:
             </p>
             <pre className="bg-gray-100 dark:bg-gray-800 p-2 rounded">
               <code>adjusted_k = k_factor * (0.5 + overall_score) * (1 + time_factor * 0.5) * (1 + form_factor * 0.2)</code>
@@ -98,19 +98,19 @@ export default function BlogPost() {
         </p>
         <pre className="bg-gray-100 dark:bg-gray-800 p-2 rounded">
           <code>{`data = {
-    'team1_avg_elo': team1_avg_elo,
-    'team2_avg_elo': team2_avg_elo,
-    'team1_avg_form': team1_avg_form,
-    'team2_avg_form': team2_avg_form,
-    'team1_last_5_wins': team1_last_5_wins,
-    'team2_last_5_wins': team2_last_5_wins,
-    'team1_vs_team2_matches': team1_vs_team2_matches,
-    'head_to_head_win_rate': head_to_head_win_rate,
-    'team1_win_rate': team1_win_rate
+  'team1_avg_elo': team1_avg_elo,
+  'team2_avg_elo': team2_avg_elo,
+  'team1_avg_form': team1_avg_form,
+  'team2_avg_form': team2_avg_form,
+  'team1_last_5_wins': team1_last_5_wins,
+  'team2_last_5_wins': team2_last_5_wins,
+  'team1_vs_team2_matches': team1_vs_team2_matches,
+  'head_to_head_win_rate': head_to_head_win_rate,
+  'team1_win_rate': team1_win_rate
 }`}</code>
         </pre>
         <p className="text-gray-800 dark:text-gray-300">
-          These features are then fed into an XGBoost model that I've trained on historical IPL data. The XGBoost algorithm excels at capturing non-linear relationships and feature interactions, making it ideal for the complex patterns in cricket match outcomes.
+          These features are then fed into an XGBoost model that I&#39;ve trained on historical IPL data. The XGBoost algorithm excels at capturing non-linear relationships and feature interactions, making it ideal for the complex patterns in cricket match outcomes.
         </p>
 
         <h2 className="text-gray-900 dark:text-gray-100">Technical Implementation Highlights</h2>
@@ -120,11 +120,11 @@ export default function BlogPost() {
         </p>
         <pre className="bg-gray-100 dark:bg-gray-800 p-2 rounded">
           <code>{`if batting_ratio > 0.7:
-    player_roles[player] = 'batsman'
+  player_roles[player] = 'batsman'
 elif batting_ratio < 0.3:
-    player_roles[player] = 'bowler'
+  player_roles[player] = 'bowler'
 else:
-    player_roles[player] = 'all-rounder'`}</code>
+  player_roles[player] = 'all-rounder'`}</code>
         </pre>
         <p className="text-gray-800 dark:text-gray-300">
           This adaptive approach ensures that players are evaluated appropriately even as their roles evolve throughout their careers.
@@ -144,7 +144,7 @@ else:
 
         <h3 className="text-gray-900 dark:text-gray-100">Performance-Based ELO Adjustments</h3>
         <p className="text-gray-800 dark:text-gray-300">
-          The ELO adjustment isn't simply based on match results but is scaled by individual performance:
+          The ELO adjustment isn&#39;t simply based on match results but is scaled by individual performance:
         </p>
         <pre className="bg-gray-100 dark:bg-gray-800 p-2 rounded">
           <code>elo_adjustment = adjusted_k * (match_result - expected_score) * (1 + overall_score)</code>
@@ -178,7 +178,7 @@ else:
 
         <h3 className="text-gray-900 dark:text-gray-100">Financial Market Prediction</h3>
         <p className="text-gray-800 dark:text-gray-300">
-          The concepts of time decay, performance-based adjustments, and form factors can be applied to financial instruments. Stock performance could be evaluated with similar methodologies, with "roles" replaced by sectors or company types.
+          The concepts of time decay, performance-based adjustments, and form factors can be applied to financial instruments. Stock performance could be evaluated with similar methodologies, with &quot;roles&quot; replaced by sectors or company types.
         </p>
 
         <h3 className="text-gray-900 dark:text-gray-100">Resource Allocation in Business</h3>
@@ -191,46 +191,15 @@ else:
           The approach of weighting different factors, applying time decay to historical data, and continuous recalibration could enhance predictive models for patient outcomes in healthcare settings.
         </p>
 
-        <h2 className="text-gray-900 dark:text-gray-100">Challenges and Future Improvements</h2>
-        <p className="text-gray-800 dark:text-gray-300">
-          While the current system performs well, there's always room for improvement:
-        </p>
-        <ol className="text-gray-800 dark:text-gray-300">
-          <li>
-            <strong>Venue and Condition Effects</strong>
-            <p className="text-gray-800 dark:text-gray-300">
-              Incorporating pitch conditions and venue-specific factors could further refine predictions.
-            </p>
-          </li>
-          <li>
-            <strong>Opposition-Specific Performance</strong>
-            <p className="text-gray-800 dark:text-gray-300">
-              Some players perform differently against specific opponents. A more granular approach could account for these matchup effects.
-            </p>
-          </li>
-          <li>
-            <strong>Deep Learning Integration</strong>
-            <p className="text-gray-800 dark:text-gray-300">
-              Experimenting with deep learning models could potentially capture even more complex patterns in the data.
-            </p>
-          </li>
-          <li>
-            <strong>Real-Time Updating</strong>
-            <p className="text-gray-800 dark:text-gray-300">
-              Implementing a system for in-game prediction adjustments based on match situations would be an exciting extension.
-            </p>
-          </li>
-        </ol>
-
         <h2 className="text-gray-900 dark:text-gray-100">Conclusion</h2>
         <p className="text-gray-800 dark:text-gray-300">
-          Building this IPL match predictor with a custom ELO rating system was both challenging and rewarding. By focusing on individual player contributions, accounting for their specific roles, and implementing sophisticated time-based adjustments, I've created a prediction system that outperforms conventional approaches.
+          Building this IPL match predictor with a custom ELO rating system was both challenging and rewarding. By focusing on individual player contributions, accounting for their specific roles, and implementing sophisticated time-based adjustments, I&#39;ve created a prediction system that outperforms conventional approaches.
         </p>
         <p className="text-gray-800 dark:text-gray-300">
-          The project demonstrates how domain knowledge (understanding cricket and player roles) combined with advanced analytics techniques can produce powerful predictive models. Whether you're interested in sports analytics, machine learning applications, or just a cricket enthusiast, I hope this project provides valuable insights into the intersection of sports and data science.
+          The project demonstrates how domain knowledge (understanding cricket and player roles) combined with advanced analytics techniques can produce powerful predictive models. Whether you&#39;re interested in sports analytics, machine learning applications, or just a cricket enthusiast, I hope this project provides valuable insights into the intersection of sports and data science.
         </p>
         <p className="text-gray-800 dark:text-gray-300">
-          As the IPL season progresses, I'll continue to refine the model and share updates on its performance. Feel free to reach out if you're interested in discussing the technical details or exploring potential collaborations in sports analytics or related fields.
+          As the IPL season progresses, I&#39;ll continue to refine the model and share updates on its performance. Feel free to reach out if you&#39;re interested in discussing the technical details or exploring potential collaborations in sports analytics or related fields.
         </p>
         
         <div className="mt-8 p-4 bg-gray-100 dark:bg-gray-800 rounded-lg">
@@ -240,7 +209,7 @@ else:
         </div>
         
         <p className="mt-6 italic text-gray-800 dark:text-gray-300">
-          — The code for this project is available on my GitHub repository. If you're interested in the technical implementation or want to explore the data, check out the <a href="#" className="text-blue-600 underline">project link</a>.
+          — The code for this project is available on my GitHub repository. If you&#39;re interested in the technical implementation or want to explore the data, check out the <a href="#" className="text-blue-600 underline">project link</a>.
         </p>
       </section>
     </article>
