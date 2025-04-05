@@ -39,7 +39,7 @@ export default function BlogPost() {
 
           <h2>The Challenge of Cricket Prediction</h2>
           <p>
-            Cricket's complexity, unpredictability, and human variability make accurate predictions hard. Most models focus on team stats or win/loss ratios, overlooking individual player form and impact. The IPL adds more complexity with player rotations and dynamic team compositions.
+            Cricket&apos;s complexity, unpredictability, and human variability make accurate predictions hard. Most models focus on team stats or win/loss ratios, overlooking individual player form and impact. The IPL adds more complexity with player rotations and dynamic team compositions.
           </p>
 
           <h2>The Innovation: Player-Specific ELO Rating System</h2>
@@ -157,7 +157,7 @@ else:
             This IPL predictor was a rewarding challenge. With player-specific insights and statistical rigor, it outperforms traditional methods.
           </p>
           <p>
-            This project shows the power of combining domain knowledge with machine learning. Whether you're into sports, data science, or just cricket — there's something here for you.
+            This project shows the power of combining domain knowledge with machine learning. Whether you&apos;re into sports, data science, or just cricket — there&apos;s something here for you.
           </p>
 
           <div className="mt-10 p-4 bg-gray-100 dark:bg-gray-800 rounded-xl">
