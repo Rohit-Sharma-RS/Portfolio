@@ -12,17 +12,22 @@ export default function BlogPage() {
 
   return (
     <article className="mt-8 flex flex-col gap-8 pb-16">
-      <h1 className="title text-3xl font-bold mb-4">my blog.</h1>
-      <div className="flex flex-col gap-8">
+      <h1 className="text-3xl font-bold mb-4 text-gray-900 dark:text-white">my blog.</h1>
+      <div className="flex flex-col gap-6">
         {posts.map((post) => (
-          <div key={post.slug} className="border rounded-lg p-4 shadow-md hover:shadow-lg transition-shadow duration-300 bg-white dark:bg-gray-800 text-black dark:text-white">
-            <Link href={`/blog/${post.slug}`} legacyBehavior>
-              <a className="underline">
-                <h2 className="text-xl font-semibold mb-2">{post.title}</h2>
-              </a>
-            </Link>
-            <p className="text-gray-700 dark:text-gray-300">{post.description}</p>
-          </div>
+          <Link
+            key={post.slug}
+            href={`/blog/${post.slug}`}
+            className="group border rounded-lg p-6 bg-white dark:bg-gray-800 shadow-md hover:shadow-xl transition-all duration-300 hover:border-blue-500"
+          >
+            <h2 className="text-xl font-semibold text-gray-900 dark:text-white group-hover:text-blue-600">
+              {post.title}
+              <span className="inline-block transition-transform group-hover:translate-x-1"> →</span>
+            </h2>
+            <p className="mt-2 text-gray-700 dark:text-gray-300">
+              {post.description}
+            </p>
+          </Link>
         ))}
       </div>
     </article>
