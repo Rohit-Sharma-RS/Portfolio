@@ -9,6 +9,38 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      typography: (theme) => ({
+  DEFAULT: {
+    css: {
+      code: {
+        backgroundColor: theme("colors.gray.100"),
+        color: theme("colors.gray.800"),
+        padding: "0.2rem 0.4rem",
+        borderRadius: "0.25rem",
+        fontWeight: "500",
+      },
+      pre: {
+        backgroundColor: theme("colors.gray.100"),
+        color: theme("colors.gray.800"),
+        padding: "1rem",
+        borderRadius: "0.5rem",
+        overflowX: "auto",
+      },
+    },
+  },
+  dark: {
+    css: {
+      code: {
+        backgroundColor: theme("colors.gray.800"),
+        color: theme("colors.gray.100"),
+      },
+      pre: {
+        backgroundColor: theme("colors.gray.900"),
+        color: theme("colors.gray.100"),
+      },
+    },
+  },
+}),
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
