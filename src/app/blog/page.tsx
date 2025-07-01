@@ -11,7 +11,14 @@ export default function BlogPage() {
   ];
 
   return (
-    <article className="mt-8 flex flex-col gap-8 pb-16">
+    <article className="prose prose-lg mx-auto my-8 
+  text-gray-800 dark:text-gray-200 
+  prose-headings:text-black dark:prose-headings:text-white
+  prose-p:text-gray-800 dark:prose-p:text-gray-300
+  prose-li:text-gray-800 dark:prose-li:text-gray-300
+  prose-a:text-blue-600 dark:prose-a:text-blue-400
+">
+
       <h1 className="title text-3xl font-bold mb-4">my blog.</h1>
       <div className="flex flex-col gap-8">
         {posts.map((post) => (

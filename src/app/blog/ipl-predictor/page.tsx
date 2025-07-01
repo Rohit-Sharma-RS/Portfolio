@@ -9,7 +9,14 @@ export default function BlogPost() {
         <meta name="description" content="A deep dive into building a machine learning-powered IPL match predictor using player-specific ELO ratings, form analysis, and advanced data science techniques." />
       </Head>
 
-      <article className="prose prose-lg mx-auto my-10 px-4 text-black dark:text-white">
+<article className="prose prose-lg mx-auto my-8 
+  text-gray-800 dark:text-gray-200 
+  prose-headings:text-black dark:prose-headings:text-white
+  prose-p:text-gray-800 dark:prose-p:text-gray-300
+  prose-li:text-gray-800 dark:prose-li:text-gray-300
+  prose-a:text-blue-600 dark:prose-a:text-blue-400
+">
+
         {/* Post Header */}
         <header className="mb-8 text-center">
           <h1 className="text-4xl font-bold">Beyond the Boundary: Building a Machine Learning IPL Match Predictor with Advanced ELO Rating System</h1>

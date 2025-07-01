@@ -2,7 +2,14 @@ import Image from "next/image";
 
 export default function BlogPost() {
   return (
-    <article className="prose prose-lg mx-auto my-8 text-black dark:text-white">
+    <article className="prose prose-lg mx-auto my-8 
+  text-gray-800 dark:text-gray-200 
+  prose-headings:text-black dark:prose-headings:text-white
+  prose-p:text-gray-800 dark:prose-p:text-gray-300
+  prose-li:text-gray-800 dark:prose-li:text-gray-300
+  prose-a:text-blue-600 dark:prose-a:text-blue-400
+">
+
       {/* Post Header */}
       <header className="mb-6">
         <h1 className="text-4xl text-black dark:text-white">
