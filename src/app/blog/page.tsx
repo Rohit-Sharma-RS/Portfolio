@@ -2,6 +2,7 @@ import Link from "next/link";
 
 export default function BlogPage() {
   const posts = [
+    {slug: "focushub", title: "Building FocusHub: My Deep Dive Into Real-Time Django, WebSockets & Productivity Design", description: "A breakdown of the journey building FocusHub—a real-time virtual study room platform with live chat, Pomodoro sessions, lo-fi music, and gamified study tracking—powered by Django, PostgreSQL, Channels, and Render."},
     {slug: "ipl-predictor", title: "Beyond the Boundary: Building a Machine Learning IPL Match Predictor with Advanced ELO Rating System", description: "How I created a sophisticated cricket match prediction model combining custom ELO ratings, player form analysis, and machine learning to predict IPL match outcomes with remarkable accuracy."},
     { slug: "dive-into-ML", title: "My Gradual Dive into Machine Learning", description: "A journey through the basics and advancements in Machine Learning." },
     { slug: "useful-py", title: "Scripting My Way Through Life: A collection of Useful Python Scripts", description: "A compilation of Python scripts that make life easier." },

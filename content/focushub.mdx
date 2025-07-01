@@ -1,0 +1,139 @@
+---
+title: "Building FocusHub: My Deep Dive Into Real-Time Django, WebSockets & Productivity Design"
+summary: "A breakdown of the journey building FocusHub—a real-time virtual study room platform with live chat, Pomodoro sessions, lo-fi music, and gamified study tracking—powered by Django, PostgreSQL, Channels, and Render."
+image: "/focushub-preview.jpg"
+publishedAt: "2025-07-01"
+---
+
+Building [FocusHub](https://focushub-5sq5.onrender.com/) wasn’t a weekend hack project—it was an end-to-end crash course in designing production-ready web apps with real-time components. From setting up Django Channels to deploying WebSocket-enabled apps on Render, I hit every wall, fought every 403, and learned more in 3 weeks than most textbooks could teach in a semester.
+
+This post walks through what I built, how it works, and what it taught me.
+
+---
+
+## 🎯 What is FocusHub?
+
+FocusHub is a virtual productivity space where users can:
+
+- Join **real-time study rooms** and chat with others via WebSockets
+- Use a **Pomodoro timer** to track sessions
+- **Listen to lo-fi music** embedded from curated static tracks
+- **Rate their productivity** which is self-explantory through post-session and visuals on user dashboard
+- See their **session history**, duration, and notes for additional motivation
+- Track **recent study trends** with user-friendly visuals and detailed logs
+It’s like a virtual library meets productivity app, designed to help users stay focused and motivated.
+---
+
+## 🔧 Major Features and How They Work
+
+### 💬 Real-Time Study Rooms (with Django Channels + ASGI)
+
+This was my first dive into **ASGI** (Asynchronous Server Gateway Interface) along with Django to enable WebSockets. Traditional Django (via WSGI/Gunicorn) wouldn't cut it.
+
+- Used **Daphne** instead of Gunicorn to serve the ASGI app
+- Implemented **rooms.routing** for WebSocket logic
+- Built **chat functionality** using group-based channel layers
+- Managed real-time messages with in-memory layers
+
+**What I learned:**  
+ASGI requires a different mindset than typical Django—`asgi.py` needs to be set up properly with routing and Channels middleware. Debugging async stack traces was a fun skill level-up.
+
+---
+
+### ⏲️ Pomodoro Timer & Session Logs
+
+Each user gets:
+
+- A frontend timer
+- A backend `StudySession` model storing start and end time
+- Auto-calculated durations (with some bugs I had to fix—more below!)
+
+I used Django’s ORM to track session durations and attached them to specific rooms and users.
+
+**What I learned:**  
+Handling `duration` properly means converting from `total_seconds()` to minutes—otherwise you end up showing users things like “False min” on the dashboard 😅. Adding a `@property` saved me from dirty math in the template amazing decorators and there is so much to learn.
+
+---
+
+### 🎵 Lo-fi Music Integration
+
+The app plays lo-fi music via embedded audio players sourced from static `.mp3` files.
+
+Challenges:
+- Ensured valid file paths were included in `collectstatic`
+- Used **WhiteNoise** for static file handling on Render
+- Had to debug a bunch of 404s (static file routing is a pain in prod)
+
+**What I learned:**  
+`STATICFILES_DIRS`, `STATIC_ROOT`, and `STATIC_URL` must be configured *exactly right*—and `collectstatic` is non-negotiable.
+
+---
+
+### 🧠 Gamified Productivity Ratings
+
+- Streak tracking
+- A competitive leaderboard shows users’ productivity time based on their Pomodoro sessions.
+- Room Recommendations based on session history help users stay in the right mindset.
+- Visually appealing cards display session data, including:
+- See their **session history**, duration, and notes
+- **Track weekly study hours**, session count, and time spent
+- View **heatmaps** of study consistency across weekdays/months
+- **Maintain streaks** for daily studying
+- Climb the leaderboard of **top rooms based on activity**
+
+**What I learned:**  
+Subtle UX details like this make a huge difference in engagement, and are surprisingly fun to implement.
+
+---
+
+### 📊 Recent Sessions Timeline
+
+Each user sees their most recent study logs, including:
+
+- Room title
+- Duration
+
+---
+
+## 🏗️ The Deployment Journey (aka The Struggles)
+
+### 🔄 ASGI, Render, and Gunicorn Errors
+
+I faced every possible misconfiguration:
+
+- **"ModuleNotFoundError: app"** – from Render’s default `gunicorn app:app`
+- **Static file 404s** – because I forgot `collectstatic`
+- **"web: command not found"** – from putting `web:` inside the `startCommand` block
+- **CSRF 403** – solved by adding `CSRF_TRUSTED_ORIGINS`
+- **"auth_user does not exist"** – because I forgot `python manage.py migrate`
+- **No SSH or pre-deploy command on free Render** – so I injected `migrate` and `createsuperuser` directly into `asgi.py` 🤯
+
+**What I learned:**  
+Cloud deployment is a tough nut to crack at times, after building your app. Free-tier constraints push you to learn dirty but clever tricks—and I loved every minute of it.
+
+---
+
+## 🧠 Tech Stack
+
+- **Frontend**: HTML + TailwindCSS + JS
+- **Backend**: Django, Django Channels, PostgreSQL
+- **Real-time**: ASGI, Daphne, WebSockets
+- **Hosting**: Render (free tier!)
+- **Extras**: WhiteNoise
+
+---
+
+## 💡 Final Thoughts
+
+This project made me appreciate how much goes into creating a “simple” product:
+
+- You need **backend logic**, **frontend polish**, **deployment infrastructure**, **security setup**, and **a dev’s curiosity** to keep going when 403s and tracebacks feel never-ending.
+
+You can try the live site here 👉 [Focushub](https://focushub-5sq5.onrender.com)
+
+And if you’re curious about the source code or want to build your own version, hit up the [GitHub repo](https://github.com/Rohit-Sharma-RS/focushub) (or DM me on [LinkedIn] (https://www.linkedin.com/in/rohit-sharma-b26200282/)!).
+
+---
+
+Thanks for reading — and stay focused 💪  
+— Rohit
