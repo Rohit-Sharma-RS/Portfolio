@@ -20,15 +20,30 @@
     ]
     },
     {
-      "name": "Olcademy",
-      "href": "https://www.olcademy.in/?i=1",
-      "title": "Data Engineer (Intern)", 
-      "logo": "/olcademy.jpg",
-      "start": "Jan 2025",
-      "end": "Present",
-      "description": [
-        "Currently working as a Data Engineer intern at Olcademy."
-      ]
+  "name": "Olcademy",
+  "href": "https://www.olcademy.in/?i=1",
+  "title": "Data Engineer (Intern)", 
+  "logo": "/olcademy.jpg",
+  "start": "Jan 2025",
+  "end": "July 2025",
+  "description": [
+    "Built ETL pipelines for 13K+ restaurant records, reducing data sparsity from 56% to 15%.",
+    "Rebuilt restaurant search and recommendation algorithm with AI-driven quality filters and geo-spatial ranking, improving recommendation relevance.",
+    "Led and represented a team of 6 interns, mentoring newcomers on project workflows.",
+    "Recognized as 'Rising Star Intern' by the company for outstanding performance and contributions."
+  ],
+  "links": [
+    {
+      "name": "Certificate",
+      "href": "https://drive.google.com/file/d/1JcMpn2eMNmaaLdmIkuIAz8YmdAEWJhiD/view?usp=sharing",
+      "icon": "globe"
+    },
+    {
+      "name": "Appraisal",
+      "href": "https://drive.google.com/file/d/19OqIvMW7H-TweyZrjJt4yFvHup11sETy/view?usp=drive_link",
+      "icon": "globe"
     }
+  ]
+}
   ]
 }

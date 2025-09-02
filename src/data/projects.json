@@ -1,6 +1,32 @@
 {
   "projects": [
     {
+  "name": "FocusHub",
+  "description": "An AI-powered study and productivity platform integrating real-time collaboration, task management, and personalized study assistance using Llama-3. Built with Django and WebSockets for seamless multi-user interaction.",
+  "image": "D:\\Portfolio\\public\\focushub-preview.jpg",
+  "tags": [
+    "Python",
+    "Django",
+    "WebSockets",
+    "AI",
+    "Llama-3",
+    "Productivity",
+    "Real-time Collaboration"
+  ],
+  "links": [
+    {
+      "name": "Source",
+      "href": "https://github.com/Rohit-Sharma-RS/FocusHub",
+      "icon": "github"
+    },
+    {
+      "name": "Demonstration Post",
+      "href": "https://www.linkedin.com/posts/rohit-sharma-b26200282_django-websockets-asgi-activity-7345824087652343808-Fr8t?utm_source=share&utm_medium=member_desktop&rcm=ACoAAES6vk4BNfgbm6C3NqzCJAMef3vk6-B9AVw", 
+      "icon": "linkedin"
+    }
+  ]
+},
+    {
       "name": "IPL Predictor",
       "description": "An IPL predictor application featuring player analyzer, venue analyzer, and team analyzer with interactive charts, making cricket analytics accessible and easy to understand.",
       "image": "/ipl-pred.png",
