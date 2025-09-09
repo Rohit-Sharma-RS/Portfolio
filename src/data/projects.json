@@ -3,7 +3,7 @@
     {
   "name": "FocusHub",
   "description": "An AI-powered study and productivity platform integrating real-time collaboration, task management, and personalized study assistance using Llama-3. Built with Django and WebSockets for seamless multi-user interaction.",
-  "image": "D:\\Portfolio\\public\\focushub-preview.jpg",
+  "image": "/focushub-preview.jpg",
   "tags": [
     "Python",
     "Django",
